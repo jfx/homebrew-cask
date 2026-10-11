@@ -18,6 +18,8 @@ cask "freesurfer" do
 
   pkg "freesurfer-macOS-darwin_#{arch}-#{version}.pkg"
 
+  uninstall pkgutil: "org.freesurfer.*"
+
   zap trash: "~/Library/Preferences/edu.harvard.mgh.nmr.FreeView.plist"
 
   caveats do
